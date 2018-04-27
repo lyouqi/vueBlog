@@ -36,8 +36,18 @@ module.exports = {
                 text: '关于',
                 link: '/about/'
             },
+            {
+                text: '其它',
+                items: [
+                    { text: '其一', link: '/other/first' },
+                    { text: '其二', link: '/other/second' },
+                ]
+            }
         ],
         search: true,
         searchMaxSuggestions: 5,
-    }
+    },
+    sidebar: [
+        ['/page-b', 'Explicit link text']
+    ]
 }
