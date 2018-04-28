@@ -35,6 +35,7 @@ export default {
     padding-left 0.5em
   &:not(.collapsable)
     .sidebar-heading
+      text-align center
       cursor auto
       color inherit
 
@@ -45,7 +46,7 @@ export default {
   font-size 1.1em
   font-weight bold
   // text-transform uppercase
-  padding-left 1.5rem
+  // padding-left 1.5rem
   margin-top 0
   margin-bottom 0.5rem
   &.open, &:hover

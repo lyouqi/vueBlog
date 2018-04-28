@@ -1,5 +1,6 @@
 <template>
   <div class="sidebar">
+    <MyInfo/>
     <NavLinks/>
     <slot name="top"/>
     <ul class="sidebar-links" v-if="items.length">
@@ -19,12 +20,13 @@
 
 <script>
 import SidebarGroup from './SidebarGroup.vue'
+import MyInfo from './MyInfo.vue'
 import SidebarLink, { groupHeaders } from './SidebarLink.vue'
 import NavLinks from './NavLinks.vue'
 import { isActive, resolveSidebarItems } from './util'
 
 export default {
-  components: { SidebarGroup, SidebarLink, NavLinks },
+  components: { SidebarGroup, SidebarLink, NavLinks, MyInfo },
   props: ['items'],
   data () {
     return {
