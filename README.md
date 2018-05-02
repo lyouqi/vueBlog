@@ -29,3 +29,7 @@ npm run dev
 npm run build
 
 这套流程相信大家肯定会很熟悉，这就是一套完整的构建体系，当然想要更改默认的vue主题可以在.vuepress/theme/下进行对应的修改即可
+
+### 配置文件
+
+.vuepress/config.js 是博客的配置目录

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ren Blog | git一些常用的骚操作</title>
+    <meta name="description" content="任亚楠个人博客">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.351b37c1.css" as="style"><link rel="preload" href="/assets/js/app.831ac6bd.js" as="script"><link rel="preload" href="/assets/js/4.637953dd.js" as="script"><link rel="preload" href="/assets/js/7.6d99a5db.js" as="script"><link rel="prefetch" href="/assets/js/3.52cdda3f.js"><link rel="prefetch" href="/assets/js/1.ddda9a57.js"><link rel="prefetch" href="/assets/js/2.36a762bb.js"><link rel="prefetch" href="/assets/js/5.14f891a9.js"><link rel="prefetch" href="/assets/js/6.067bd674.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.351b37c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      Ren Blog
+    </span></a><div class="links"><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div><div class="nav-item"><a href="/photo/" class="nav-link">相册</a></div><div class="nav-item"><a href="/message/" class="nav-link">留言</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><!----></nav><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div></div></header><div class="sidebar-mask"></div><div class="sidebar"><div id="myinfo"><div class="header-icon"><img src="http://renblog.renyanan.com/blog/img/banana.png" alt></div><div class="github">github:
+        <a href="https://github.com">github.com</a></div></div><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div><div class="nav-item"><a href="/photo/" class="nav-link">相册</a></div><div class="nav-item"><a href="/message/" class="nav-link">留言</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><!----></nav><ul class="sidebar-links"><li><a href="/blog/" class="sidebar-link">博客记录首页</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>2018-05博客汇总</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/blog/2018-05/2018-05-02.html" class="active sidebar-link">git一些常用的骚操作</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul></div><div class="page"><div class="content"><h3 id="前沿"><a href="#前沿" aria-hidden="true" class="header-anchor">#</a> 前沿</h3><p>这周入职了新公司，主要是熟悉一些基本流程以及操作，但是之前自己对于git来说也就是会一些简单的上传提交等，然后这次主要用到了一些分支合并以及一些快捷办法，所以就写了这片git一些常用骚操作，忘了一些命令的时候可以返回来查一下，希望能够给到大家一点帮助。</p><h3 id="ssh密匙操作"><a href="#ssh密匙操作" aria-hidden="true" class="header-anchor">#</a> ssh密匙操作</h3><h5 id="查看密钥（mac下，win下同理）"><a href="#查看密钥（mac下，win下同理）" aria-hidden="true" class="header-anchor">#</a> 查看密钥（MAC下，win下同理）</h5><p>默认存储在～/.ssh目录下，在windows下默认应该是存在于C:\Users\用户名.ssh下的以.pub结尾的就是公匙，另一个就是私钥了。</p><pre class="language-bash"><code>$ <span class="token function">cd</span> ~/.ssh
+$ <span class="token function">cat</span> id_rsa.pub
+</code></pre><h5 id="生成密钥"><a href="#生成密钥" aria-hidden="true" class="header-anchor">#</a> 生成密钥</h5><p>默认机器上已经安装git</p><pre class="language-bash"><code>$ ssh-keygen
+</code></pre><p>一路回车即可，生成的目录就在默认目录~/.ssh下，windows的目录同上</p><h3 id="基本操作"><a href="#基本操作" aria-hidden="true" class="header-anchor">#</a> 基本操作</h3><p>一般来说日常的使用git的话只用看下面这张图就OK了基本上。</p><p><img src="http://renblog.renyanan.com/blog/git/GIT.png" alt="'git基本命令图'"></p><div style="text-align:center;font-size:12px">图来自阮一峰博客，如有侵权立刻删除，见谅！</div><p></p><p>具体的什么意思呢，给大家解释说明一下，从右向左看起，平时的一些操作都是以下的结构体系！</p><pre><code>Workspace 表示的是工作区
+Index 代表暂存区
+Repository 表示本地仓库
+Remote 远程仓库
+箭头指示代表每次用到的git命令
+</code></pre><p>这里再次针对图中的箭头指示进行解释</p><pre class="language-bash"><code>$ <span class="token function">git</span> add 文件名字     ：将文件从Workspace-<span class="token operator">&gt;</span>Index，文件此时存在于Index
+$ <span class="token function">git</span> commit -m <span class="token string">&quot;提交的信息&quot;</span>     ：将文件从Index-<span class="token operator">&gt;</span>Repository，文件此时存在于Repository
+$ <span class="token function">git</span> push     ：将文件从Repository-<span class="token operator">&gt;</span>Remote，文件此时存在于Remote
+$ <span class="token function">git</span> clone 远端地址     ：将文件从Remote-<span class="token operator">&gt;</span>Repository，文件此时存在于本地
+$ <span class="token function">git</span> pull     ：拉取Remote最新代码到本地
+</code></pre><h5 id="克隆远端"><a href="#克隆远端" aria-hidden="true" class="header-anchor">#</a> 克隆远端</h5><p>从git远端克隆到本地</p><pre class="language-git"><code><span class="token command">$ git clone 远端地址</span>
+</code></pre><h5 id="初始化以及提交"><a href="#初始化以及提交" aria-hidden="true" class="header-anchor">#</a> 初始化以及提交</h5><pre class="language-git"><code><span class="token command">$ git config<span class="token parameter"> --list</span> 显示当前git配置信息</span>
+<span class="token command">$ git config [--global] user.name </span><span class="token string">&quot;[name]&quot;</span> 配置用户名
+<span class="token command">$ git config [--global] user.email </span><span class="token string">&quot;[email address]&quot;</span> 配置邮箱
+
+<span class="token command">$ git init</span>
+<span class="token command">$ git add 文件名</span>
+<span class="token command">$ git commit<span class="token parameter"> -m</span> </span><span class="token string">'信息'</span>
+<span class="token command">$ git push origin master</span>
+</code></pre><p>命令合并，直接提交已修改文件</p><p>git commit -a -m '提交信息'</p><h3 id="分支命令"><a href="#分支命令" aria-hidden="true" class="header-anchor">#</a> 分支命令</h3><pre class="language-git"><code><span class="token command">$ git branch 列出所有本地分支</span>
+<span class="token command">$ git branch<span class="token parameter"> -r</span> 所有远端分支</span>
+<span class="token command">$ git branch<span class="token parameter"> -a</span> 所有分支</span>
+<span class="token command">$ git branch [branch-name] 新建分支但停留在当前分支</span>
+<span class="token command">$ git checkout<span class="token parameter"> -b</span> [branch-name] 新建分支并切换到该分支</span>
+<span class="token command">$ git checkout [branch-name] 切换到指定分支并且更新当前的工作区</span>
+<span class="token command">$ git merge [branch-name] 合并分支到当前分支，例如合并分支到master务必切换当前分支到master下</span>
+<span class="token command">$ git branch<span class="token parameter"> -d</span> [branch-name] 删除分支</span>
+<span class="token command">$ git push origin<span class="token parameter"> --delete</span> [branch-name] 删除远端的分支</span>
+</code></pre><h3 id="打标签（ps：用的一般不多，想更多了解请自行谷歌）"><a href="#打标签（ps：用的一般不多，想更多了解请自行谷歌）" aria-hidden="true" class="header-anchor">#</a> 打标签（ps：用的一般不多，想更多了解请自行谷歌）</h3><pre class="language-git"><code><span class="token command">$ git tag 列出所有标签</span>
+<span class="token command">$ git tag [tag] 新建一个tag在目前的commit中</span>
+<span class="token command">$ git tag [tag] [commit] 在指定的commit中设定tag</span>
+</code></pre><h3 id="同步命令"><a href="#同步命令" aria-hidden="true" class="header-anchor">#</a> 同步命令</h3><pre class="language-git"><code><span class="token command">$ git status 查看当前状态</span>
+<span class="token command">$ git fetch [remote] 下载远程仓库所有变动</span>
+<span class="token command">$ git push [remote] [branch] 上传本地指定分支到远程仓库</span>
+git push [remote] --all 推送所有分支到远端
+</code></pre><h3 id="查看"><a href="#查看" aria-hidden="true" class="header-anchor">#</a> 查看</h3><pre class="language-git"><code><span class="token command">$ git log 显示目前的分支的版本</span>
+<span class="token command">$ git log<span class="token parameter"> -p</span> [file] 显示某个文件的每一次diff</span>
+<span class="token command">$ git shortlog<span class="token parameter"> -sn</span> 显示提交过的所有用户</span>
+<span class="token command">$ git diff 显示暂存区和工作区的差异</span>
+<span class="token command">$ git diff HEAD 工作区与最新commit之间的差异</span>
+<span class="token command">$ git reflog 显示当前分支最近的几次提交</span>
+</code></pre><h3 id="撤销操作"><a href="#撤销操作" aria-hidden="true" class="header-anchor">#</a> 撤销操作</h3><pre class="language-git"><code><span class="token command">$ git checkout . 恢复暂存区的所有文件到工作区</span>
+<span class="token command">$ git reset 重制暂存区的文件，工作区的具体变化查看对应的属性值</span>
+</code></pre><div id="moneyBox" class="money-box">
+    如果您觉得我帮到了您，喝杯咖啡可否？
+    <div class="img-box"><img src="http://renblog.renyanan.com/blog/index/moneyCore.png" alt></div></div></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/blog/" class="prev router-link-active">
+          博客记录首页
+        </a></span><!----></p></div></div></div></div>
+    <script src="/assets/js/4.637953dd.js" defer></script><script src="/assets/js/7.6d99a5db.js" defer></script><script src="/assets/js/app.831ac6bd.js" defer></script>
+  </body>
+</html>

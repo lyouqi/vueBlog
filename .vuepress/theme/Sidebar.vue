@@ -20,7 +20,7 @@
 
 <script>
 import SidebarGroup from './SidebarGroup.vue'
-import MyInfo from './MyInfo.vue'
+import MyInfo from './MyCom/MyInfo.vue'
 import SidebarLink, { groupHeaders } from './SidebarLink.vue'
 import NavLinks from './NavLinks.vue'
 import { isActive, resolveSidebarItems } from './util'
@@ -80,6 +80,7 @@ function resolveOpenGroupIndex (route, items) {
     margin 0
     list-style-type none
   a
+    font-size .8rem
     display inline-block
   .nav-links
     display none

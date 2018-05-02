@@ -40,10 +40,11 @@ export default {
       color inherit
 
 .sidebar-heading
-  color #999
+  text-align center
+  color #ccc
   transition color .15s ease
   cursor pointer
-  font-size 1.1em
+  font-size .9em
   font-weight bold
   // text-transform uppercase
   // padding-left 1.5rem

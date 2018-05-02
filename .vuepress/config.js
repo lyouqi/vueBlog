@@ -8,7 +8,7 @@ module.exports = {
         }]
     ],
     host: '0.0.0.0',
-    port: 80,
+    port: 8080,
     dest: '.vuepress/dist',
     ga: 'undefined',
     serviceWorker: false,
@@ -45,12 +45,11 @@ module.exports = {
             '/blog/': [
                 ['', '博客记录首页'],
                 {
-                    title: '2018博客汇总',
-                    collapsable: false,
+                    title: '2018-05博客汇总',
+                    collapsable: true,
                     children: [
                         // 每次插入目录要在前面插入
-                        ['/blog/2018/git一些常用的骚操作.md','git一些常用的骚操作'],
-                        ['/blog/2018/来到58到家一周感受.md','来到58到家一周感受']
+                        ['/blog/2018-05/2018-05-02.md','git一些常用的骚操作']
                     ]
                 }
             ]
