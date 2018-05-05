@@ -1,6 +1,8 @@
 ---
 title: 任亚楠博客首页
+description: 任亚楠个人网站首页
 lang: en-US
+head: [link, { rel: icon, href: /renblog_favicon.ico }]
 meta: 
     - name: 博客
       content: 内容部分
@@ -32,4 +34,4 @@ npm run build
 
 ### 配置文件
 
-.vuepress/config.js 是博客的配置目录
+.vuepress/config.js 是博客的配置目录，进去之后就能够按照自己的所需来搭配不同的页面

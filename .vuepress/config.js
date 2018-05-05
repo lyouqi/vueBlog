@@ -4,7 +4,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: `/logo.png`
+            href: `/renblog_favicon.ico`
         }]
     ],
     host: '0.0.0.0',
