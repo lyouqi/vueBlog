@@ -12,10 +12,9 @@ export default {};
 
 <style lang='stylus'>
 .money-box
-    font-size .8rem
+    margin-top 30px
+    font-size 12px
     font-weight 600
-    width 100%
-    height 100px
     text-align center
     img
         width 70%

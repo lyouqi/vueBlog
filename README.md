@@ -8,7 +8,7 @@ meta:
       content: 内容部分
 ---
 
-### 2018-04博客终于建立起来了
+### 2018-04，使用vuepress搭建博客
 
 ![首页题图](http://renblog.renyanan.com/blog/index/%E7%BE%8E%E5%A5%B3.jpg)
 
@@ -35,3 +35,7 @@ npm run build
 ### 配置文件
 
 .vuepress/config.js 是博客的配置目录，进去之后就能够按照自己的所需来搭配不同的页面
+
+### 服务器环境
+
+服务器采用express搭建，PM2持续集成，但是总有一点小问题调整，我的webpack使用真的有问题，得多看看文档了。

@@ -49,6 +49,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         // 每次插入目录要在前面插入
+                        ['/blog/2018-05/2018-05-23.md','webpack基本教程'],
                         ['/blog/2018-05/2018-05-02.md','git一些常用的骚操作']
                     ]
                 }
