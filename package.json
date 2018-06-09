@@ -8,7 +8,7 @@
     "dev": "vuepress dev",
     "build": "vuepress build"
   },
-  "author": "",
+  "author": "臭臭",
   "license": "ISC",
   "dependencies": {
     "vuepress": "^0.8.4"

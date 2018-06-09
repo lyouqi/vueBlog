@@ -40,6 +40,7 @@ export default {
 @import './styles/config.styl';
 
 .navbar {
+  background linear-gradient(to right, #E8FDEB, #DBE7FD) !important
   padding: 0.7rem 1.5rem;
   line-height: $navbarHeight - 1.4rem;
   position: relative;

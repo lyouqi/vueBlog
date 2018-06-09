@@ -4,7 +4,7 @@
             <img src="http://renblog.renyanan.com/blog/img/banana.png" alt="">
         </div>
         <div class="github">github:
-            <a href="https://github.com">github.com</a>
+            <a href="https://github.com/callren">github.com</a>
         </div>
     </div>
 </template>
